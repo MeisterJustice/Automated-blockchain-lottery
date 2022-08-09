@@ -172,7 +172,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         return s_lastTimeStamp;
     }
 
-    function getRequestConfirmations() public view returns (uint16) {
+    function getRequestConfirmations() public pure returns (uint16) {
         return REQUEST_CONFIRMATIONS;
     }
 
