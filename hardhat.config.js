@@ -24,6 +24,15 @@ module.exports = {
             blockConfirmations: 6,
             url: RINKEBY_RPC_URL,
             accounts: [PRIVATE_KEY],
+            saveDeployments: true,
+        },
+    },
+    etherscan: {
+        // yarn hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
+        apiKey: {
+            rinkeby: ETHERSCAN_API_KEY,
+            // kovan: ETHERSCAN_API_KEY,
+            // polygon: POLYGONSCAN_API_KEY,
         },
     },
     gasReporter: {
@@ -31,7 +40,7 @@ module.exports = {
         currenccy: "USD",
         outputFile: "gas-report.txt",
         noColors: true,
-        // coinmarketcap: COINMARKET_API_KEY
+        coinmarketcap: COINMARKET_API_KEY,
     },
     solidity: "0.8.9",
     namedAccounts: {
@@ -43,6 +52,6 @@ module.exports = {
         },
     },
     mocha: {
-        timeout: 400000,
+        timeout: 500000,
     },
 }
